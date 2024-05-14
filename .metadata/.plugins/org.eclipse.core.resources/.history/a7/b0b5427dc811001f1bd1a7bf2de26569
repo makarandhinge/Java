@@ -1,0 +1,27 @@
+
+//Java Program to Check Whether a Given Number is Even or Odd
+
+package com.example.program;
+import java.util.*;
+
+public class EvenAndOdd {
+
+	public EvenAndOdd(int n) {
+		
+		if((n%2) == 0) {
+			System.out.println("Entered number is Even");
+		}
+		else {
+			System.out.println("Entered number is Odd");
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		EvenAndOdd oe = new EvenAndOdd(n);
+		
+
+	}
+
+}
