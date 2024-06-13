@@ -15,7 +15,7 @@ public static void main(String[] args) throws IOException {
 		if(n<=0) {
 			System.out.println("Number not be negative");
 		}else {
-			System.out.println(((n*(n+1)*(2*n+1))/6);
+			System.out.println(((n*(n+1)*(2*n+1))/6));
 		}
 
 	}
