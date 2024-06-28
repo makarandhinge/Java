@@ -4,9 +4,10 @@ public class MultithreadingEX {
 
         MyThread t = new MyThread();
         t.start();
-       // t.join();
+        t.join();
         for(int i = 1;i<10;i++){
-            System.out.println("I am Main Thread");
+            System.out.println("I am Main Thread " + i );
+            Thread.sleep(5000);
         }
     }
 }
