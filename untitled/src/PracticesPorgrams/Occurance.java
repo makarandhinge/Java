@@ -11,7 +11,7 @@ public class Occurance {
 
     public static int findMostFrequentElement(int[] array) {
         if (array == null || array.length == 0) {
-            throw new IllegalArgumentException("Array must not be null or empty");
+            throw new IllegalArgumentException("San_Program.Array must not be null or empty");
         }
 
         // Sort the array
