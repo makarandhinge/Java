@@ -18,7 +18,7 @@ public class TraceMatrix {
                 }
             }
 
-            int maxTrace = Integer.MIN_VALUE;
+            int maxTrace = Integer.MIN_VALUE; //-2147483648
 
             for (int l = 1; l <= N; l++) {
                 for (int r = 0; r <= N - l; r++) {

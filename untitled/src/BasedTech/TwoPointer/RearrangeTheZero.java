@@ -6,7 +6,7 @@ public class RearrangeTheZero {
     static int index = 0;
 
     public static void main(String[] args) {
-        
+
         while(index < arr.length){
             if(arr[index] != 0 && arr[nonZeroIndex] != 0){
                 nonZeroIndex++;
