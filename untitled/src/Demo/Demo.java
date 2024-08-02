@@ -1,35 +1,30 @@
 package Demo;
 
-import TechnicalLecture.Vec;
+public class Demo {
+    static int staticVar = 0;
+    int instanceVar = 0;
 
-import javax.swing.tree.TreeNode;
-import java.util.*;
+    public static void staticMethod() {
+        staticVar++;
+    }
 
-public class Demo{
+    public void nonStaticMethod() {
+        instanceVar++;
+    }
 
     public static void main(String[] args) {
+        Demo obj1 = new Demo();
+        Demo obj2 = new Demo();
 
-        int nums[] = {992,324,54};
-        int number = 992;
-        int rev = 0;
-        while (number > 0) {
-            int digit = number % 10;
-            rev = (rev * 10) + digit;
-            number = number / 10;
-        }
-        number = 0;
-        while (rev > 0) {
-            int digit = rev % 10;
-            number = (number * 10) + digit;
-            rev = rev / 10;
-        }
+        // Accessing static method
+        Demo.staticMethod();
 
+        // Accessing non-static method
+        obj1.nonStaticMethod();
+        obj2.nonStaticMethod();
 
-
-
-
-
-            }
-        }
-
-
+        System.out.println("Static variable: " + Demo.staticVar); // Output: 1
+        System.out.println("Instance variable of obj1: " + obj1.instanceVar); // Output: 1
+        System.out.println("Instance variable of obj2: " + obj2.instanceVar); // Output: 1
+    }
+}
