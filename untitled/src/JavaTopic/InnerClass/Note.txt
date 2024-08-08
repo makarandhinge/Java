@@ -1,0 +1,3 @@
+Inner Classes --
+1.Inner class can directly access the member of outer class.
+2.Outer class cannot access the member of inner class directly unless it can create an object.
