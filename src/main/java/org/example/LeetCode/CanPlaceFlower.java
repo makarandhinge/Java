@@ -22,6 +22,6 @@ public class CanPlaceFlower {
         
 
 
-
+return true;
     }
 }

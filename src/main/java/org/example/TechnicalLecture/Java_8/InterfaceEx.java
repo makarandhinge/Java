@@ -7,7 +7,7 @@ public class InterfaceEx implements InterfaceA {
     }
 
     public static void main(String[] args) {
-        multiple();
+//        multiple();
         InterfaceEx d = new InterfaceEx();
         d.subtract();
     }
