@@ -1,5 +1,7 @@
 package org.example.master_Lambda;
 
+import java.util.Stack;
+
 // Definition for singly-linked list.
 class ListNode {
     int val;
@@ -59,17 +61,24 @@ public class MainMain {
                 list2.next.next.next.next = new ListNode(7);
                 list2.next.next.next.next.next = new ListNode(8);
 
+
 //                MergeResult : 1 -> 1 -> 3 -> 3 -> 4-> 5 -> 6 -> 7 -> 7 -> 8 -> 9-> 10
 
-                SolutionEx s = new SolutionEx();
-                ListNode mergeResult = s.mergeTwoLists(list1,list2);
+//                SolutionEx s = new SolutionEx();
+//                ListNode mergeResult = s.mergeTwoLists(list1,list2);
+//
+//                while(mergeResult != null){
+//                    System.out.print(mergeResult.val + " ");
+//                    mergeResult = mergeResult.next;
+//                }
 
-                while(mergeResult != null){
-                    System.out.print(mergeResult.val + " ");
-                    mergeResult = mergeResult.next;
+
+                Reverse r = new Reverse();
+                ListNode result = r.reverseList(list1);
+                while(result != null){
+                    System.out.print(result.val + " ");
+                    result = result.next;
                 }
-
-
                 }
             }
 class SolutionEx {
@@ -112,5 +121,26 @@ class Solution1ms {
         }
         slow.next = slow.next.next;     // 7 = 1
         return head;
+    }
+}
+
+
+class Reverse {
+    public ListNode reverseList(ListNode head) {
+        //linked list: 1 -> 3 -> 4 -> 7 -> 9-> 10
+
+        Stack<Integer> stack = new Stack<>();
+        while(head != null){
+            stack.push(head.val);
+            head = head.next;
+        }
+        ListNode dummy = new ListNode(-1);
+        ListNode reverse = dummy;
+
+        while(stack.isEmpty() == false){
+            reverse.next = new ListNode(stack.pop());
+            reverse = reverse.next;
+        }
+        return dummy.next;
     }
 }
