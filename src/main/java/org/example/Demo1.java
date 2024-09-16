@@ -10,12 +10,10 @@ public class Demo1 {
 
 
     public static void main(String[] args) {
-        byte x = 64;
-        int i;
-        byte y;
-        i = x << 2;
-        y = ((byte) (x << 2));
-        System.out.print(i + " " + y);
+       StringBuilder s = new StringBuilder("leetcode");
+       s.reverse();
+       String s1 = s.toString();
+        System.out.println(s1);
     }
     }
 
