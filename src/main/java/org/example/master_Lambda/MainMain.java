@@ -1,5 +1,8 @@
 package org.example.master_Lambda;
 
+import java.util.ArrayDeque;
+import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 // Definition for singly-linked list.
@@ -61,6 +64,21 @@ public class MainMain {
                 list2.next.next.next.next = new ListNode(7);
                 list2.next.next.next.next.next = new ListNode(8);
 
+                OddEvenIndex o = new OddEvenIndex();
+                ListNode result = o.oddEvenList(list1);
+                while(result != null){
+                    System.out.print(result.val + " ");
+                    result = result.next;
+                }
+
+//                OddEvenElement o = new OddEvenElement();
+//                ListNode result = o.oddEvenList(list1);
+//                while(result != null){
+//                    System.out.print(result.val + " ");
+//                    result = result.next;
+//                }
+
+
 
 //                MergeResult : 1 -> 1 -> 3 -> 3 -> 4-> 5 -> 6 -> 7 -> 7 -> 8 -> 9-> 10
 
@@ -73,14 +91,82 @@ public class MainMain {
 //                }
 
 
-                Reverse r = new Reverse();
-                ListNode result = r.reverseList(list1);
-                while(result != null){
-                    System.out.print(result.val + " ");
-                    result = result.next;
-                }
+//                Reverse r = new Reverse();
+//                ListNode result = r.reverseList(list1);
+//                while(result != null){
+//                    System.out.print(result.val + " ");
+//                    result = result.next;
+//                }
                 }
             }
+
+class OddEvenIndex {
+    public ListNode oddEvenList(ListNode head) {
+
+        if(head == null){
+            return null;
+        }
+
+        ListNode odd = new ListNode(0);
+        ListNode even = new ListNode(0);
+
+        ListNode oddTail = odd;
+        ListNode evenTail = even;
+
+        int index = 1;
+
+        while(head != null){
+            if((index%2) == 0){
+                evenTail.next = new ListNode(head.val);
+                evenTail = evenTail.next;
+            } else {
+                oddTail.next = new ListNode(head.val);
+                oddTail = oddTail.next;
+            }
+            head = head.next;
+            index++;
+        }
+
+        evenTail.next = null;
+        oddTail.next = even.next;
+
+        return odd.next;
+    }
+}
+
+class OddEvenElement {
+    public ListNode oddEvenList(ListNode head) {
+
+        if(head == null){
+            return null;
+        }
+
+        ListNode odd = new ListNode(0);
+        ListNode even = new ListNode(0);
+
+        ListNode oddTail = odd;
+        ListNode evenTail = even;
+
+        while(head != null){
+            if((head.val%2) == 0){
+                evenTail.next = new ListNode(head.val);
+                evenTail = evenTail.next;
+            } else {
+                oddTail.next = new ListNode(head.val);
+                oddTail = oddTail.next;
+            }
+            head = head.next;
+        }
+
+        evenTail.next = null;
+        oddTail.next = even.next;
+
+        return odd.next;
+
+    }
+}
+
+
 class SolutionEx {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
