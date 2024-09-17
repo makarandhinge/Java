@@ -10,10 +10,7 @@ public class Demo1 {
 
 
     public static void main(String[] args) {
-       StringBuilder s = new StringBuilder("leetcode");
-       s.reverse();
-       String s1 = s.toString();
-        System.out.println(s1);
+
     }
     }
 
