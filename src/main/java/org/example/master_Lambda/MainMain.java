@@ -31,7 +31,7 @@ class Solution {
         }
 
         // Step 2: Calculate the middle index
-        int middleIndex = length / 2;
+        int middleIndex = length / 2; //o1
 
         // Step 3: Traverse the list to find and remove the middle node
         current = head;

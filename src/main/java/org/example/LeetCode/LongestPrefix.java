@@ -7,8 +7,8 @@ public class LongestPrefix {
 
         Solution solution = new Solution();
         String strs[] = {"flower","flow","flight"};
-        solution.longestCommonPrefix(strs);
-
+        String s = solution.longestCommonPrefix(strs);
+        System.out.println(s);
 
 
 

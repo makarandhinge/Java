@@ -1,16 +1,16 @@
 package org.example;
 
-import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.Collections;
+import org.example.Demo.Demo;
 
-import static com.fasterxml.jackson.databind.type.LogicalType.Collection;
+import java.util.Scanner;
 
 public class Demo1 {
+    public void someouter(){
 
-
+    }
+    public class Inner{}
     public static void main(String[] args) {
-
+        System.out.println(8>>2);
     }
-    }
+}
 
