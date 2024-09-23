@@ -1,16 +1,12 @@
 package org.example;
 
-import org.example.Demo.Demo;
-
-import java.util.Scanner;
+// Java program for Merge Sort
 
 public class Demo1 {
-    public void someouter(){
+    public static void main(String[] args) {
+        int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
     }
-    public class Inner{}
-    public static void main(String[] args) {
-        System.out.println(8>>2);
-    }
+
 }
 

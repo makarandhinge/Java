@@ -25,5 +25,8 @@ public class NonDuplicate {
         }
         System.out.println(count);
 
+        Object m = hashmap.clone();
+        System.out.println(m);
+
     }
 }

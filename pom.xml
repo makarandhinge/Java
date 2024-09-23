@@ -26,6 +26,19 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>3.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+            <version>0.23.0</version>
+        </dependency>
+
 
 
     </dependencies>
