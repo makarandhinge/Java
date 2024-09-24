@@ -1,9 +1,23 @@
 package org.example.Sorting;
 
+
+/*
+* Merge sort is a sorting technique based on divide and conquer technique.
+* Merge Sort first divide the array into equal halves and then combine them in a sorted manner.
+*Worst Case Time Complexity is O(nlogn).
+*
+* Disadvantage -->
+* It required extra space N.
+* Merge Sort is less efficient than other sort.
+*
+* Reference -- https://www.youtube.com/watch?v=TzeBrDU-JaY
+* */
+
+
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}; // Testing Purpose
         MergeSort ms = new MergeSort();
         ms.mergeSort(arr);
         for (int i : arr) {
