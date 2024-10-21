@@ -62,3 +62,30 @@ public class NQueens {
         nQueens.placeNQueens();
     }
 }
+
+
+/*Algorithm placeNQueens(N):
+    Initialize queens[] array of size N
+    Call placeQueen(column = 0)
+
+Function placeQueen(col):
+    If col == N:
+        Print queens[] as a solution
+        Return true
+
+    For each row from 0 to N-1:
+        If canPlace(row, col):
+            Place queen in (row, col)
+            If placeQueen(col + 1) succeeds:
+                Return true
+            Else:
+                Remove queen (backtrack)
+
+    Return false  // If no valid position found in this column
+
+Function canPlace(row, col):
+    For each previously placed queen in columns 0 to col-1:
+        If queen in the same row or on the same diagonal:
+            Return false
+    Return true  // It's safe to place the queen here
+*/
