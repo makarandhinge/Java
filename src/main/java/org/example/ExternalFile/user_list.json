@@ -1,0 +1,23 @@
+[{
+  "firstName" : "Makarnad",
+  "lastName" : "Patil",
+  "age" : 22,
+  "address" : {
+    "street" : "507A",
+    "city" : "kagal",
+    "zipCode" : "416216",
+    "state" : "Maharashtra"
+  }
+},
+   {
+  "firstName" : "Vin",
+  "lastName" : "XXX",
+  "age" : 25,
+  "address" : {
+    "street" : "507A",
+    "city" : "Kolhapur",
+    "zipCode" : "416001",
+    "state" : "Maharashtra"
+  }
+}
+  ]
