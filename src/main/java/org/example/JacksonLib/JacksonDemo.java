@@ -22,7 +22,7 @@ public class JacksonDemo {
     static void readFiles(String FileAddress) throws Exception{
         ObjectMapper obj = new ObjectMapper();
         User[] user = obj.readValue(new FileReader(FileAddress), User[].class);
-        System.out.println(obj.writerWithDefaultPrettyPrinter().git writeValueAsString(user));
+        System.out.println(obj.writerWithDefaultPrettyPrinter().writeValueAsString(user));
     }
 
 
